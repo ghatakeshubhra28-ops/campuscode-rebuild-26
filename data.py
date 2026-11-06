@@ -19,3 +19,16 @@ NAV = [
     {"key": "help",          "label": "Help & Support",         "url": "#"},
     {"key": "profile",       "label": "Profile",                "url": "#"},
 ]
+FEATURED = {
+    "label": "Build · Learn · Collaborate",
+    "title": "ReBuild '26",
+    "text": "An individual dashboard-recreation hackathon by CampusCode. Recreate the platform on Friday and rebuild it with an original design on Saturday. Frontend only, mock data is fine.",
+    "initials": "RE",
+}
+
+STATS = [
+    {"label": "Registered",   "value": 1},
+    {"label": "Ongoing",      "value": 1},
+    {"label": "Completed",    "value": 0},
+    {"label": "Certificates", "value": 0},
+]

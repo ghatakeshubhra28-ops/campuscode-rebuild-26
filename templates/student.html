@@ -7,4 +7,26 @@
 {% block content %}
   <p class="mono-label">Student workspace / live</p>
   <h1 class="welcome">WELCOME BACK, <span class="welcome-name">{{ user.first|upper }}</span>.</h1>
+  <section class="feature-card">
+  <div class="feature-text">
+    <p class="mono-label">{{ featured.label }}</p>
+    <h2 class="feature-title">{{ featured.title }}</h2>
+    <p class="feature-desc">{{ featured.text }}</p>
+    <a href="/student/my-events" class="btn-lime">OPEN EVENT &#8599;</a>
+  </div>
+  <div class="feature-badge">
+    <span class="avatar-lg">{{ user.initials }}</span>
+    <span class="badge-circle">{{ featured.initials }}</span>
+  </div>
+</section>
+
+<section class="stat-row">
+  {% for s in stats %}
+    <div class="stat-card">
+      <p class="mono-label">{{ s.label }}</p>
+      <p class="stat-value">{{ s.value }}</p>
+      <p class="mono-label">From backend</p>
+    </div>
+  {% endfor %}
+</section>
 {% endblock %}
