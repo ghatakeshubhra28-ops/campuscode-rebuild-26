@@ -1,3 +1,4 @@
+console.log("login.js is running");
 const pass = document.getElementById("password");
 const btn = document.getElementById("toggle-pass");
 
@@ -8,7 +9,8 @@ btn.addEventListener("click", function () {
   } else {
     pass.type = "password";
     btn.textContent = "SHOW";
-  }
+    }
+});
   const form = document.getElementById("login-form");
 const captchaBox = document.getElementById("captcha-box");
 const newCaptchaBtn = document.getElementById("new-captcha");
@@ -54,5 +56,4 @@ form.addEventListener("submit", function (e) {
   setTimeout(function () {
     window.location.href = "/initializing";
   }, 1500);
-});
 });
