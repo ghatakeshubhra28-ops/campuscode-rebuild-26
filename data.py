@@ -5,20 +5,21 @@ USER = {
 }
 
 NAV = [
-    {"key": "overview",      "label": "Overview",               "url": "/student"},
-    {"key": "events",        "label": "Events",                 "url": "/student/events"},
-    {"key": "my-events",     "label": "My Events",              "url": "/student/my-events"},
-    {"key": "hackmate",      "label": "HackMate AI",            "url": "#"},
-    {"key": "ideacheck",     "label": "IdeaCheck AI",           "url": "#"},
-    {"key": "certificates",  "label": "Certificates",           "url": "#"},
-    {"key": "digital-card",  "label": "Digital Card",           "url": "#"},
-    {"key": "rulebot",       "label": "RuleBot AI",             "url": "#"},
-    {"key": "guide",         "label": "Student Guide",          "url": "#"},
-    {"key": "official",      "label": "Official Communication", "url": "#"},
-    {"key": "notifications", "label": "Notifications",          "url": "#"},
-    {"key": "help",          "label": "Help & Support",         "url": "#"},
-    {"key": "profile",       "label": "Profile",                "url": "#"},
+    {"key": "overview",      "label": "Overview",              "url": "/student",           "icon": "layout-dashboard"},
+    {"key": "events",        "label": "Events",                "url": "/student/events",    "icon": "calendar"},
+    {"key": "my-events",     "label": "My Events",             "url": "/student/my-events", "icon": "clock"},
+    {"key": "hackmate",      "label": "HackMate AI",           "url": "#", "icon": "sparkles"},
+    {"key": "ideacheck",     "label": "IdeaCheck AI",          "url": "#", "icon": "lightbulb"},
+    {"key": "certificates",  "label": "Certificates",          "url": "#", "icon": "award"},
+    {"key": "digital-card",  "label": "Digital Card",          "url": "#", "icon": "id-card"},
+    {"key": "rulebot",       "label": "RuleBot AI",            "url": "#", "icon": "bot"},
+    {"key": "guide",         "label": "Student Guide",         "url": "#", "icon": "book-open"},
+    {"key": "official",      "label": "Official Communication","url": "#", "icon": "megaphone"},
+    {"key": "notifications", "label": "Notifications",         "url": "#", "icon": "bell"},
+    {"key": "help",          "label": "Help & Support",        "url": "#", "icon": "life-buoy"},
+    {"key": "profile",       "label": "Profile",               "url": "#", "icon": "user"},
 ]
+
 FEATURED = {
     "label": "Build · Learn · Collaborate",
     "title": "ReBuild '26",

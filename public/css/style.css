@@ -985,3 +985,6 @@ body {
 body { animation: pageFade .5s ease-out both; }
 @keyframes pageFade { from { opacity: 0; } to { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { body { animation: none; } }
+
+.side-label { display: flex; align-items: center; gap: 10px; }
+.side-label svg { width: 16px; height: 16px; stroke-width: 1.75; flex-shrink: 0; }

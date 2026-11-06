@@ -23,14 +23,17 @@
 
     <p class="mono-label side-heading">Workspace</p>
 
-    <nav class="side-nav">
-      {% for item in nav %}
-        <a href="{{ item.url }}" class="side-link {% if item.key == active %}active{% endif %}">
-          <span>{{ item.label }}</span>
-          {% if item.key == active %}<span>&rarr;</span>{% endif %}
-        </a>
-      {% endfor %}
-    </nav>
+<nav class="side-nav">
+  {% for item in nav %}
+    <a href="{{ item.url }}" class="side-link {% if item.key == active %}active{% endif %}">
+      <span class="side-label">
+        <i data-lucide="{{ item.icon }}"></i>
+        {{ item.label }}
+      </span>
+      {% if item.key == active %}<span>&rarr;</span>{% endif %}
+    </a>
+  {% endfor %}
+</nav>
 
     <div class="side-account">
       <p class="mono-label">Account</p>
@@ -65,6 +68,7 @@
       {% block content %}{% endblock %}
     </main>
   </div>
-
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script>lucide.createIcons();</script>
 </body>
 </html>
