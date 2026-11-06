@@ -1,5 +1,69 @@
 <!DOCTYPE html>
-<html>
-<head><title>Test</title></head>
-<body><h1>Login</h1></body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login | CampusCode</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="glow glow-purple"></div>
+  <div class="glow glow-lime"></div>
+
+  <main class="page auth">
+
+    <section class="auth-left">
+      <p class="mono-label"><span class="dot"></span> CampusCode / Authentication</p>
+      <h1 class="auth-title">ENTER<br>THE<br><span class="outline-text">ARENA.</span></h1>
+      <p class="auth-sub">Sign in to continue building, collaborating and competing with the CampusCode community.</p>
+
+      <div class="mini-cards">
+        <div class="mini-card"><span class="mono-label">01</span><strong>BUILD</strong></div>
+        <div class="mini-card"><span class="mono-label">02</span><strong>COMPETE</strong></div>
+        <div class="mini-card"><span class="mono-label">03</span><strong>SHIP</strong></div>
+      </div>
+    </section>
+
+    <section class="auth-right">
+      <div class="auth-card">
+        <p class="mono-label">Existing account</p>
+<h2 class="card-title">LOGIN</h2>
+<p class="card-sub">Access your CampusCode account.</p>
+<hr class="card-line">
+
+<form id="login-form" novalidate>
+  <label class="field-label" for="email">Email address</label>
+  <input class="field" type="email" id="email" placeholder="you@example.com">
+
+  <label class="field-label" for="password">Password</label>
+  <div class="field-wrap">
+    <input class="field" type="password" id="password" placeholder="Enter your password">
+    <button type="button" class="show-btn" id="toggle-pass">SHOW</button>
+  </div>
+  <label class="field-label" for="captcha">Captcha</label>
+<div class="captcha-row">
+  <div class="captcha-box" id="captcha-box">00000</div>
+  <button type="button" class="link-btn" id="new-captcha">&#8635; NEW</button>
+</div>
+<input class="field" type="text" id="captcha" placeholder="Enter the code" maxlength="5">
+
+<div class="status-strip">
+  <span class="mono-label" id="status-text">READY</span>
+  <span class="status-bar"></span>
+</div>
+
+<p class="form-error" id="form-error"></p>
+
+<button type="submit" class="btn-black" id="login-btn">LOGIN <span>&#8599;</span></button>
+<a href="#" class="forgot">FORGOT PASSWORD?</a>
+</form>
+      
+    </section>
+
+  </main>
+  <script src="/js/login.js"></script>
+</body>
 </html>

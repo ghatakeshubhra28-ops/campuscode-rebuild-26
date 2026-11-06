@@ -59,3 +59,215 @@ body {
   position: relative;
   z-index: 1;
 }
+/* ---------- Login / Register layout ---------- */
+.auth {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+  min-height: 100vh;
+  padding: 48px 6vw;
+}
+
+.dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--lime-dark);
+  margin-right: 6px;
+}
+
+.auth-title {
+  font-size: clamp(64px, 9vw, 130px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  margin: 24px 0;
+}
+
+.outline-text {
+  color: transparent;
+  -webkit-text-stroke: 2px #bdbdb5;
+}
+
+.auth-sub {
+  max-width: 380px;
+  color: #55554f;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.mini-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 440px;
+}
+
+.mini-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-size: 14px;
+}
+
+.auth-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--purple);
+  padding: 32px;
+  max-width: 440px;
+  margin-left: auto;
+  min-height: 420px;
+}
+/* ---------- Form card ---------- */
+.card-title {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: 10px;
+}
+
+.card-sub {
+  font-size: 12px;
+  color: #77776f;
+  margin-top: 4px;
+}
+
+.card-line {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 20px 0;
+}
+
+.field-label {
+  display: block;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #77776f;
+  margin: 16px 0 6px;
+}
+
+.field {
+  width: 100%;
+  padding: 12px 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.field:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 3px rgba(118, 101, 255, 0.12);
+}
+
+.field-wrap {
+  position: relative;
+}
+
+.show-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: #77776f;
+}
+/* ---------- Captcha, status, button ---------- */
+.captcha-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.captcha-box {
+  font-family: 'DM Mono', monospace;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 6px;
+  padding: 8px 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--purple);
+  user-select: none;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--lime-dark);
+}
+
+.status-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+  padding: 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+
+.status-bar {
+  width: 3px;
+  height: 18px;
+  background: var(--lime-dark);
+}
+
+.form-error {
+  min-height: 18px;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #d33a3a;
+}
+
+.btn-black {
+  width: 100%;
+  margin-top: 6px;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  transition: background 0.2s;
+}
+
+.btn-black:hover {
+  background: #2a2a2a;
+}
+
+.forgot {
+  display: block;
+  margin-top: 14px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--purple);
+  text-decoration: none;
+}

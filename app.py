@@ -14,5 +14,9 @@ def login():
 def register():
     return render_template("register.html")
 
+@app.route("/initializing")
+def initializing():
+    return render_template("initializing.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
