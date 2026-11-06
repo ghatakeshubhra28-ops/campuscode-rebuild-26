@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Dashboard{% endblock %} | CampusCode</title>
+  <link rel="icon" href="/img/campuscode-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="dash-body">
+
+  <aside class="sidebar">
+    <div class="side-brand">
+      <img src="/img/campuscode-logo.png" alt="CampusCode">
+      <div>
+        <strong>CAMPUSCODE</strong>
+        <span class="mono-label">Hackathon Arena</span>
+      </div>
+    </div>
+
+    <p class="mono-label side-heading">Workspace</p>
+
+    <nav class="side-nav">
+      {% for item in nav %}
+        <a href="{{ item.url }}" class="side-link {% if item.key == active %}active{% endif %}">
+          <span>{{ item.label }}</span>
+          {% if item.key == active %}<span>&rarr;</span>{% endif %}
+        </a>
+      {% endfor %}
+    </nav>
+
+    <div class="side-account">
+      <p class="mono-label">Account</p>
+      <div class="side-user">
+        <span class="avatar-sm">{{ user.initials }}</span>
+        <div>
+          <strong>{{ user.name }}</strong>
+          <span class="mono-label">Student</span>
+        </div>
+      </div>
+      <a href="/login" class="logout-btn">LOG OUT</a>
+    </div>
+  </aside>
+
+  <div class="dash-main">
+    <header class="topbar">
+      <div>
+        <p class="mono-label">CampusCode / Student</p>
+        <p class="topbar-title">{% block page_name %}Overview{% endblock %}</p>
+      </div>
+      <div class="topbar-right">
+        <span class="bell">&#128276;<span class="bell-badge">2</span></span>
+        <button class="refresh-btn">&#8635; REFRESH</button>
+        <div class="top-user">
+          <span class="avatar-sm">{{ user.initials }}</span>
+          <span>{{ user.name }}</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="dash-content">
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+
+</body>
+</html>
