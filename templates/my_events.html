@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% set active = "my-events" %}
+
+{% block title %}My Events{% endblock %}
+{% block page_name %}My Events{% endblock %}
+
+{% block content %}
+<div class="page-head">
+  <div>
+    <p class="mono-label">My activity / backend data</p>
+    <h1 class="page-title">MY EVENTS.</h1>
+    <p class="page-sub">Every event you joined, in one place. Open one to see its rounds, team, results and certificates.</p>
+  </div>
+  <div class="count-box">
+    <span class="count-num">{{ "%02d"|format(my_events|length) }}</span>
+    <span class="mono-label">Live data</span>
+  </div>
+</div>
+
+<section class="my-grid">
+  {% for m in my_events %}
+    <article class="my-card">
+      <div class="my-banner">
+        <span class="my-logo"><img src="/img/campuscode-logo.png" alt="CampusCode"></span>
+        <div>
+          <p class="mono-label">CampusCode presents</p>
+          <h2 class="my-title">{{ m.title }} <span class="purple">{{ m.year }}</span></h2>
+          <p class="my-sub">{{ m.subtitle }}</p>
+          <div class="tag-row">
+            {% for t in m.tags %}
+              <span class="tag"><span class="tag-dot"></span>{{ t }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="my-meta">
+        <span class="event-icon">{{ m.initials }}</span>
+        <div>
+          <p class="mono-label">Status: {{ m.status }}</p>
+          <p class="mono-label">Team: {{ m.team }}</p>
+        </div>
+      </div>
+
+      <a href="#" class="btn-lime">OPEN JOURNEY &#8599;</a>
+    </article>
+  {% endfor %}
+</section>
+{% endblock %}

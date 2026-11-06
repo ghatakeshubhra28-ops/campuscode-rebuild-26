@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% set active = "events" %}
+
+{% block title %}Events{% endblock %}
+{% block page_name %}Events{% endblock %}
+
+{% block content %}
+<div class="page-head">
+  <div>
+    <p class="mono-label">Discover / hackathons</p>
+    <h1 class="page-title">EVENTS.</h1>
+    <p class="page-sub">Find hackathons and competitions, then join the ones you like.</p>
+  </div>
+  <div class="count-box">
+    <span class="count-num">{{ "%02d"|format(events|length) }}</span>
+    <span class="mono-label">Live data</span>
+  </div>
+</div>
+
+<section class="event-row">
+  {% for e in events %}
+    <div class="event-card">
+      <div class="event-top">
+        <span class="event-icon">{{ e.initials }}</span>
+        <div>
+          <p class="mono-label">{{ e.type }}</p>
+          <p class="event-title">{{ e.title }}</p>
+          <p class="mono-label">{{ e.meta }}</p>
+        </div>
+      </div>
+      <p class="event-desc">{{ e.desc }}</p>
+      {% if e.joined %}
+        <span class="chip chip-joined">JOINED</span>
+      {% else %}
+        <a href="#" class="chip chip-join">JOIN NOW &#8599;</a>
+      {% endif %}
+    </div>
+  {% endfor %}
+</section>
+{% endblock %}

@@ -1,4 +1,4 @@
-from data import USER, NAV, FEATURED, STATS, EVENTS, JOURNEY
+from data import USER, NAV, FEATURED, STATS, EVENTS, JOURNEY, ALL_EVENTS, MY_EVENTS
 from flask import Flask, render_template
 
 app = Flask(__name__, static_folder="public", static_url_path="")
@@ -33,5 +33,14 @@ def initializing():
 def student():
     return render_template("student.html", featured=FEATURED, stats=STATS,
                            events=EVENTS, journey=JOURNEY)
+
+@app.route("/student/events")
+def events():
+    return render_template("events.html", events=ALL_EVENTS)
+
+
+@app.route("/student/my-events")
+def my_events():
+    return render_template("my_events.html", my_events=MY_EVENTS)
 if __name__ == "__main__":
     app.run(debug=True)

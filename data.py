@@ -48,3 +48,21 @@ JOURNEY = [
     {"label": "Completed",    "value": 0, "pct": 0},
     {"label": "Certificates", "value": 0, "pct": 0},
 ]
+ALL_EVENTS = [
+    {"initials": "RE", "type": "Web Development", "title": "ReBuild '26",
+     "desc": "Recreate and rebuild the CampusCode dashboard. Individual hackathon, frontend only.",
+     "meta": "06 Nov 2026 · Individual participation", "joined": True},
+    {"initials": "FQ", "type": "Open Innovation", "title": "FirstCommit '26 Quiz Competition 2.0",
+     "desc": "A quick quiz round on coding and tech basics.",
+     "meta": "Quiz · Open to all", "joined": False},
+    {"initials": "FQ", "type": "Open Innovation", "title": "FirstCommit '26 Quiz Competition",
+     "desc": "The first edition of the FirstCommit quiz.",
+     "meta": "Quiz · Open to all", "joined": False},
+]
+
+MY_EVENTS = [
+    {"title": "ReBuild", "year": "'26",
+     "subtitle": "The dashboard recreation hackathon",
+     "initials": "RE", "status": "Registered", "team": "YOUR TEAM NAME",
+     "tags": ["Certificate for winners", "Internship opportunity", "Register by 5 Nov 2026"]},
+]
