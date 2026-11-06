@@ -29,4 +29,67 @@
     </div>
   {% endfor %}
 </section>
+<div class="section-head">
+  <p class="mono-label">03 / Discover events</p>
+  <a href="/student/events" class="view-all">VIEW ALL &#8599;</a>
+</div>
+
+<section class="event-row">
+  {% for e in events %}
+    <div class="event-card">
+      <div class="event-top">
+        <span class="event-icon">{{ e.initials }}</span>
+        <div>
+          <p class="mono-label">{{ e.type }}</p>
+          <p class="event-title">{{ e.title }}</p>
+          <p class="mono-label">{{ e.meta }}</p>
+        </div>
+      </div>
+      {% if e.joined %}
+        <span class="chip chip-joined">JOINED</span>
+      {% else %}
+        <a href="#" class="chip chip-join">JOIN NOW &#8599;</a>
+      {% endif %}
+    </div>
+  {% endfor %}
+</section>
+
+<section class="bottom-row">
+  <div class="panel">
+    <div class="section-head">
+      <p class="mono-label">Upcoming deadlines</p>
+      <a href="#" class="view-all">VIEW ALL &#8599;</a>
+    </div>
+    <div class="panel-empty">
+      <strong>No deadlines yet.</strong>
+      <p>Join an event and your upcoming dates will appear here.</p>
+      <a href="/student/events" class="btn-lime">BROWSE EVENTS &#8599;</a>
+    </div>
+  </div>
+
+  <div class="panel panel-lime">
+    <p class="mono-label">AI spotlight</p>
+    <h3 class="panel-title">Your AI teammates are ready.</h3>
+    <p class="panel-text">Check your idea, find teammates, or ask the rules, right from here.</p>
+    <div class="chip-row">
+      <a href="#" class="chip chip-outline">IDEACHECK</a>
+      <a href="#" class="chip chip-outline">HACKMATE</a>
+      <a href="#" class="chip chip-outline">RULEBOT</a>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="section-head">
+      <p class="mono-label">Your journey</p>
+      <a href="#" class="view-all">CERTIFICATES &#8599;</a>
+    </div>
+    {% for j in journey %}
+      <div class="journey-row">
+        <span class="mono-label">{{ j.label }}</span>
+        <div class="journey-track"><div class="journey-fill" style="width: {{ j.pct }}%"></div></div>
+        <strong>{{ j.value }}</strong>
+      </div>
+    {% endfor %}
+  </div>
+</section>
 {% endblock %}

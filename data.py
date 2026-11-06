@@ -32,3 +32,19 @@ STATS = [
     {"label": "Completed",    "value": 0},
     {"label": "Certificates", "value": 0},
 ]
+
+EVENTS = [
+    {"initials": "RE", "type": "Web Development", "title": "ReBuild '26",
+     "meta": "06 Nov 2026 · Individual participation", "joined": True},
+    {"initials": "FQ", "type": "Open Innovation", "title": "FirstCommit '26 Quiz Competition 2.0",
+     "meta": "Quiz · Open to all", "joined": False},
+    {"initials": "FQ", "type": "Open Innovation", "title": "FirstCommit '26 Quiz Competition",
+     "meta": "Quiz · Open to all", "joined": False},
+]
+
+JOURNEY = [
+    {"label": "Hackathons",   "value": 1, "pct": 100},
+    {"label": "Ongoing",      "value": 1, "pct": 100},
+    {"label": "Completed",    "value": 0, "pct": 0},
+    {"label": "Certificates", "value": 0, "pct": 0},
+]

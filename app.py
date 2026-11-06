@@ -1,4 +1,4 @@
-from data import USER, NAV, FEATURED, STATS
+from data import USER, NAV, FEATURED, STATS, EVENTS, JOURNEY
 from flask import Flask, render_template
 
 app = Flask(__name__, static_folder="public", static_url_path="")
@@ -31,7 +31,7 @@ def initializing():
 
 @app.route("/student")
 def student():
-    return render_template("student.html", featured=FEATURED, stats=STATS)
-
+    return render_template("student.html", featured=FEATURED, stats=STATS,
+                           events=EVENTS, journey=JOURNEY)
 if __name__ == "__main__":
     app.run(debug=True)
