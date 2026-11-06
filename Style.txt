@@ -1,0 +1,10 @@
+Colours: 
+#f7f7f4 (background), 
+#ffffff (cards), 
+#deded8 (borders), 
+#7665ff (purple), 
+#a8e62e and 
+#82b91a (lime), 
+#111111 (text)
+
+Fonts: Inter (bold headings) and DM Mono (small labels)
